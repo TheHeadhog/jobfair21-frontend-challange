@@ -31,6 +31,16 @@ namespace Platformer.UI
             lblEnemiesKilled.text = GameDatabase.Instance.CurrentUser.EnemiesKilled.ToString();
             lblUsername.text = GameDatabase.Instance.CurrentUser.Username;
             lblScore.text = GameDatabase.Instance.CurrentUser.Score.ToString();
+            if (won)
+            {
+                lblTitle.text = "Level won";
+                lblTitle.color = titleWonColor;
+            }
+            else
+            {
+                lblTitle.text = "Level lost";
+                lblTitle.color = titleLostColor;
+            }
         }
 
         #region Event Handlers
