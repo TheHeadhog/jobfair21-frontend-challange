@@ -23,7 +23,7 @@ namespace Platformer.UI
         void Awake()
         {
             if (_instance == null) _instance = this;
-
+            lblUsername.SetText(GameDatabase.Instance.CurrentUser.Username);
             PlayerDeath.OnExecute += PlayerDiedCallback;
             PlayerEnteredVictoryZone.OnExecute += PlayerWonCallback;
             
